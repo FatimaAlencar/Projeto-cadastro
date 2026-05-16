@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Endereço</title>
+    <link rel="stylesheet" href="/css/enderecos.css"> <!-- Conecta o CSS -->
+</head>
+<body>
+
+<!-- MODAL EDITAR -->
+
+    <div id="modalEditar" class="modal" style="display:flex;">
+
+    <!-- Caixa principal do modal -->
+    <div class="modal-content">
+
+        <h2>Editar Endereço</h2>
+
+            <!-- Guarda o ID do endereço escondido -->
+            <input type="hidden" id="enderecoId">
+
+    <!-- CLIENTE -->
+    <div class="form-group">
+
+        <label>Cliente:</label>
+            <input type="text"
+                   id="cliente"
+            oninput="limparErroCampo('cliente', 'erroCliente')">   <!-- Remove erro ao digitar -->
+            <span class="erro" id="erroCliente"></span>
+    </div>
+
+        <!-- CEP -->
+    <div class="form-group">
+            <label>CEP:</label>
+
+        <!-- Quando sai do campo busca o CEP automático -->
+            <input type="text"
+                   id="cep"
+                   onblur="buscarCep()"
+                   oninput="limparErroCampo('cep', 'erroCep')">  <!-- Remove erro ao digitar -->
+            <span class="erro" id="erroCep"></span> <!-- Mensagem de erro -->
+    </div>
+
+        <!-- RUA -->
+    <div class="form-group">
+            <label>Rua:</label>
+            <input type="text"
+                   id="rua"
+                   oninput="limparErroCampo('rua', 'erroRua')">   <!-- Remove erro ao digitar -->
+            <span class="erro" id="erroRua"></span>
+    </div>
+
+    <div class="form-row">
+
+        <!-- NÚMERO -->
+    <div class="form-group">
+                <label>Número:</label>
+                <input type="text"
+                       id="numero"
+                       oninput="limparErroCampo('numero', 'erroNumero')"><!-- Remove erro ao digitar -->
+
+                <span class="erro" id="erroNumero"></span>
+    </div>
+
+        <!--COMPLEMENTO-->
+    <div class="form-group">
+                <label>Complemento:</label>
+                <input type="text">
+    </div>
+    </div>
+
+            <!-- BAIRRO -->
+    <div class="form-group">
+                <label>Bairro:</label>
+
+                <input type="text" id="bairro">
+
+                <span class="erro" id="erroBairro"></span>
+
+    </div>
+
+    <div class="form-row">
+
+        <!-- CIDADE -->
+    <div class="form-group">
+                <label>Cidade:</label>
+                <input type="text"
+                       id="cidade"
+                       oninput="limparErroCampo('cidade', 'erroCidade')"><!-- Remove erro ao digitar -->
+                <span class="erro" id="erroCidade"></span>
+    </div>
+
+        <!--ESTADO-->
+    <div class="form-group">
+                <label>Estado:</label>
+                <input type="text"
+                       id="estado"
+                       oninput="limparErroCampo('estado', 'erroEstado')"> <!-- Remove erro ao digitar -->
+                <span class="erro" id="erroEstado"></span>
+    </div>
+
+    </div>
+
+        <!--aquela “caixinha de marcar-->
+    <div class="checkbox-group">
+
+            <label>Tornar Principal</label>
+
+            <input type="checkbox" checked>
+
+    </div>
+
+    <div class="botoes">
+
+            <button onclick="fecharModal()">
+                Cancelar
+            </button>
+
+            <button onclick="abrirSucesso()">
+                Salvar
+            </button>
+
+    </div>
+    </div>
+    </div>
+
+        <!-- MODAL SUCESSO -->
+    <div id="modalSucesso" class="modal">
+
+    <div class="sucesso-content">
+
+        <h2>✓</h2>
+
+        <p>Salvo com sucesso.</p>
+
+        <button onclick="fecharSucesso()">
+            OK
+        </button>
+
+    </div>
+
+    </div>
+
+            <!-- Conecta JavaScript -->
+            <script src="/js/enderecos.js"></script>
+
+</body>
+</html>

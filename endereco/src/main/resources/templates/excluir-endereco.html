@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Configuração de caracteres -->
+    <meta charset="UTF-8">
+
+    <!-- Título da página -->
+    <title>Excluir Endereço</title>
+
+    <!-- Conecta o CSS -->
+    <link rel="stylesheet" href="/css/enderecos.css">
+
+</head>
+
+<body>
+
+         <!-- MODAL EXCLUIR -->
+    <div id="modalExcluir" class="modal" style="display:flex;">
+
+    <!-- Caixa do modal -->
+    <div class="modal-content">
+
+        <!-- Título -->
+        <h2>Excluir Endereço</h2>
+
+        <!-- CLIENTE -->
+    <div class="form-group">
+
+            <label>Cliente:</label>
+                <input type="text"
+                   value="João Silva"
+                   disabled> <!-- disabled deixa o campo bloqueado -->
+
+    </div>
+
+        <!-- CEP -->
+    <div class="form-group">
+
+            <label>CEP:</label>
+                <input type="text"
+                   value="01010000"
+                   disabled> <!-- disabled deixa o campo bloqueado -->
+
+    </div>
+
+        <!-- RUA -->
+    <div class="form-group">
+
+            <label>Rua:</label>
+                <input type="text"
+                   value="Rua A"
+                   disabled> <!-- disabled deixa o campo bloqueado -->
+
+    </div>
+
+       <!-- Linha com dois campos -->
+    <div class="form-row">
+
+            <!-- NÚMERO -->
+    <div class="form-group">
+
+            <label>Número:</label>
+                <input type="text"
+                       value="123"
+                       disabled> <!-- disabled deixa o campo bloqueado -->
+
+    </div>
+
+            <!-- COMPLEMENTO -->
+     <div class="form-group">
+
+            <label>Complemento:</label>
+                <input type="text"
+                        value="Casa"
+                        disabled> <!-- disabled deixa o campo bloqueado -->
+
+     </div>
+     </div>
+
+        <!-- BAIRRO -->
+     <div class="form-group">
+
+            <label>Bairro:</label>
+                <input type="text"
+                        value="Ceilândia Norte"
+                        disabled> <!-- disabled deixa o campo bloqueado -->
+
+     </div>
+
+        <!-- Outra linha -->
+     <div class="form-row">
+
+            <!-- CIDADE -->
+     <div class="form-group">
+
+            <label>Cidade:</label>
+                <input type="text"
+                       value="São Paulo"
+                       disabled> <!-- disabled deixa o campo bloqueado -->
+
+     </div>
+
+            <!-- ESTADO -->
+     <div class="form-group">
+
+            <label>Estado:</label>
+                <input type="text"
+                       value="SP"
+                       disabled> <!-- disabled deixa o campo bloqueado -->
+
+     </div>
+     </div>
+
+        <!-- BOTÕES -->
+     <div class="botoes">
+
+            <!-- Fecha o modal -->
+            <button onclick="fecharModalExcluir()">
+
+                Cancelar
+
+            </button>
+
+            <!-- Abre modal de sucesso -->
+            <button onclick="abrirSucessoExcluir()">
+
+                Confirmar a Exclusão
+
+            </button>
+
+     </div>
+     </div>
+
+     </div>
+
+        <!-- MODAL SUCESSO -->
+     <div id="modalSucessoExcluir" class="modal">
+
+    <!-- Caixa do sucesso -->
+     <div class="sucesso-content">
+
+        <!-- Ícone -->
+        <h2>✓</h2>
+
+        <!-- Mensagem -->
+        <p>Endereço excluído com sucesso.</p>
+
+        <!-- Fecha modal sucesso -->
+        <button onclick="fecharSucessoExcluir()">
+
+            OK
+
+        </button>
+
+     </div>
+     </div>
+
+        <!-- Conecta o JavaScript -->
+    <script src="/js/enderecos.js"></script>
+
+</body>
+</html>
